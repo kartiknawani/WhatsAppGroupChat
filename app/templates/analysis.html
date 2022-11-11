@@ -16,7 +16,7 @@
   <!-- This is emojis donut plot -->
   <div class="chart" id="donutgraph">
     <script>
-      var graphs = {{ emoji_donut | safe}};
+      var graphs= {{ emoji_donut | safe}};
       Plotly.plot('donutgraph', graphs, {});
     </script>
   </div>

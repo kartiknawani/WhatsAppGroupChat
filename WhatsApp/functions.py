@@ -23,16 +23,10 @@ class ExtractDataFrame:
     '''
 
     def __init__(self, file_path):
-        '''
-        Initializes the file path and data variable holding whole parsed data
-        '''
         self.path = file_path
         self.data = []
 
     def load_file(self):
-        '''
-        This function loads the chat file
-        '''
         file = open(self.path, 'r', encoding='utf-8')
         return file
 
@@ -56,9 +50,6 @@ class ExtractDataFrame:
             return None
 
     def process(self):
-        '''
-        This functions aggregates all the data from different lines
-        '''
         f = self.load_file()
         f.readline()
         full_message = []
@@ -88,7 +79,6 @@ class ExtractDataFrame:
         f.close()
 
     def emojis(self, msg: str) -> list:
-    
         final_list = []
         for char in msg:
             if char in emoji.UNICODE_EMOJI:
@@ -100,7 +90,6 @@ class ExtractDataFrame:
             return final_list
 
     def dataframe(self) -> object:
-        
         df = pd.DataFrame(self.data, columns=[
                           'Date', 'Time', 'Author', 'Message'])
         df['Date'] = pd.to_datetime(df.Date)
@@ -111,9 +100,6 @@ class ExtractDataFrame:
 
 class GenerateStats:
     def __init__(self):
-        '''
-        Here all the important initializations are done
-        '''
         self.holidays_dict = {datetime.date(2020, 1, 14): 'Makar Sankranti / Pongal',
                               datetime.date(2020, 1, 26): 'Republic Day',
                               datetime.date(2020, 8, 15): 'Independence Day',
