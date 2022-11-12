@@ -15,14 +15,14 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/about')
+@app.route('/SignUp')
 def about():
-    return render_template('about.html')
+    return render_template('SignUp.html')
 
 
-@app.route('/contact')
+@app.route('/SignIn')
 def contact():
-    return render_template('contact.html')
+    return render_template('SignIn.html')
 
 
 @app.route('/', methods=['POST'])
