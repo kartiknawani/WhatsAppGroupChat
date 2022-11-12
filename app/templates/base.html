@@ -263,49 +263,29 @@ body
   </head>
 
   <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">WhatsApp Chats Analyser</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+     <section class="colored-section" id="title">
+    <div class="header_section_top"></div>
+<div class="container-fluid">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">WhattsApp Analyzer</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item {% block homeactive %} {% endblock homeactive %}">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li
-            class="nav-item {% block aboutactive %} {% endblock aboutactive %}"
-          >
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li
-            class="
-              nav-item
-              {%
-              block
-              contactactive
-              %}
-              {%
-              endblock
-              contactactive
-              %}
-            "
-          >
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+    <ol class="navbar-nav ml-auto">
+         <class="nav-item {% block signupactive %} {% endblock signupactive %}">
+            <a class="nav-item" href="SignUp">Sign Up</a>
+         <class="nav-item {% block signinactive %} {% endblock signinactive %}">
+            <a class="nav-item" href="SignIn">Sign In</a>
+            <i class="fa-solid fa-user"></i>
+    </ol>
+    </div>
     </nav>
+   </div>
+   </section>
 
     <!-- Body Block -->
     {% block body %} {% endblock body %}
