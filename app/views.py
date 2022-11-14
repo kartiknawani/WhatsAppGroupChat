@@ -12,7 +12,7 @@ def page_not_found(error):
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('base.html')
 
 
 @app.route('/SignUp')
